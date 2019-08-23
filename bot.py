@@ -13,7 +13,7 @@ client = commands.Bot(command_prefix = '.')
 
 @client.event
 async def on_ready():
-    print('Bot ready.')
+    print('Hello, Navi.')
 
 @client.event
 async def on_command_error(ctx, error):
