@@ -35,7 +35,7 @@ class Fun(commands.Cog):
 
     @commands.command(brief='Send a not-so-anonymous message to someone.')
     async def yell(self, ctx, user : discord.User, *, message):
-        await user.send(f'{ctx.author.mention} yells to you: "{message}".')
+        await user.send(f'{ctx.author} yells to you: "{message}".')
         await ctx.message.delete()
 
     @commands.command(brief='Rates something from 0 to 10.')
