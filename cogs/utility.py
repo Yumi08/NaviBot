@@ -16,10 +16,10 @@ class Utility(commands.Cog):
     @commands.command()
     async def close(self, ctx):
         if ctx.author.id == 218429853144186883:
-            await ctx.send("Goodbye, Navi.")
+            await ctx.send('Goodbye, Navi.')
             await self.client.close()
         else:
-            await ctx.send("You're not Yumi.")
+            await ctx.send('You\'re not Yumi.')
 
 def setup(client):
     client.add_cog(Utility(client))
