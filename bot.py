@@ -6,7 +6,7 @@ import random
 
 ### Region: Vars
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '>')
 
 ### End: Vars
 
