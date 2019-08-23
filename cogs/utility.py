@@ -8,7 +8,7 @@ class Utility(commands.Cog):
 
     @commands.command()
     async def info(self, ctx):
-        await ctx.send('Navi v0.0.0, discord.py, created by Yumi.')
+        await ctx.send('Navi, discord.py, created by Yumi.')
 
     @commands.command()
     async def ping(self, ctx):
