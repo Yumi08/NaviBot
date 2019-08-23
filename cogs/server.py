@@ -15,7 +15,7 @@ class Server(commands.Cog):
     async def ban(self, ctx, member : discord.Member, *, reason=None):
         await member.ban(reason=reason)
 
-    @commands.command(brief='Change a user\'s nickname')
+    @commands.command(brief='Change a user\'s nickname.')
     @commands.has_permissions(manage_nicknames=True)
     async def nick(self, ctx, member : discord.Member, *, nickname):
         await ctx.guild.get_member(member.id).edit(nick=nickname)
