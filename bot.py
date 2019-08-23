@@ -62,6 +62,6 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-with open("token.txt") as file:
+with open("../data/token.txt") as file:
     client.run(file.read())
 
