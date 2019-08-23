@@ -14,6 +14,7 @@ client = commands.Bot(command_prefix = '.')
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Game('with Lain'))
     print('Hello, Navi.')
 
 @client.event
