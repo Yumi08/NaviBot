@@ -7,9 +7,13 @@ class Fun(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command(aliases=['8ball'])
-    async def _8ball(self, ctx):
-        responses = ['Definitely.', 'Probably.', 'Perhaps.', 'Probably not.', 'Definitely not.']
+    @commands.command()
+    async def hello(self, ctx):
+        await ctx.send(f'Hello, {ctx.author.name}.')
+
+    @commands.command()
+    async def magic8(self, ctx):
+        responses = ['Definitely.', 'Without a doubt.', 'Probably.', 'Likely so.', 'Perhaps.', 'Probably not.', 'Unlikely.', 'Definitely not.', 'No way.', 'I don\'t know.', 'I\'m not sure.', 'Ask yourself.']
         await ctx.send(random.choice(responses))
 
 def setup(client):
