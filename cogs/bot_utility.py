@@ -8,7 +8,7 @@ class Bot_Utility(commands.Cog):
 
     @commands.command(brief='Get bot info.')
     async def info(self, ctx):
-        await ctx.send(f'Navi, discord.py, created by {self.client.get_user(218429853144186883)}.')
+        await ctx.send(f'<:navi:614422620540108801> discord.py, created by {self.client.get_user(218429853144186883)}.')
 
     @commands.command(brief='Get bot latency.')
     async def ping(self, ctx):
