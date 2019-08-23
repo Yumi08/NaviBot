@@ -19,7 +19,12 @@ async def on_ready():
 
 @client.event
 async def on_command_error(ctx, error):
-    await ctx.send('Error.')
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send('ERROR: Pass in all required arguments.')
+    elif isinstance(error, commands.CommandNotFound):
+        await ctx.send('ERROR: Command not found.')
+    else:
+        await ctx.send('ERROR.')
 
 ### End: Events
 
