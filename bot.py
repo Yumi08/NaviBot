@@ -3,7 +3,11 @@ from discord.ext import commands
 
 import random
 
+### Region: Vars
+
 client = commands.Bot(command_prefix = '.')
+
+### End: Vars
 
 ### Region: Events
 
