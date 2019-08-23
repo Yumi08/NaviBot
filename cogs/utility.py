@@ -15,8 +15,11 @@ class Utility(commands.Cog):
 
     @commands.command()
     async def close(self, ctx):
-        await ctx.send("Closing...")
-        await self.client.close()
+        if ctx.author.id == 218429853144186883:
+            await ctx.send("Closing...")
+            await self.client.close()
+        else:
+            await ctx.send("You're not Yumi.")
 
 def setup(client):
     client.add_cog(Utility(client))
