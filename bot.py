@@ -43,7 +43,7 @@ async def unload(ctx, extension):
 @client.command()
 async def reload(ctx, extension):
     client.reload_extension(f'cogs.{extension}')
-    await ctx.send(f'Reloaded {extension}')
+    await ctx.send(f'Reloaded {extension}.')
 
 ### End: User commands
 
