@@ -27,6 +27,11 @@ class Fun(commands.Cog):
     @commands.command(brief='Mention someone random.')
     async def someone(self, ctx):
         await ctx.send(f'{random.choice(ctx.guild.members).mention}')
+
+    @commands.command(brief='Send an anonymous message to someone.')
+    async def whisper(self, ctx, user : discord.User, *, message):
+        await user.send(f'Someone whispers to you: "{message}"')
+        await ctx.message.delete()
         
 
 def setup(client):
