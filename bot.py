@@ -15,7 +15,7 @@ async def ping(ctx):
 
 @client.command(aliases=['8ball'])
 async def _8ball(ctx):
-    responses = ['Definitely.', 'Perhaps.', 'Definitely not.']
+    responses = ['Definitely.', 'Probably.', 'Perhaps.', 'Probably not.', 'Definitely not.']
     await ctx.send(random.choice(responses))
 
 client.run('NTg0ODE3NTMxNDU0MjI2NTAz.XV-Awg.hKgssTLIdHwiVK7mqI7K5clB6ew')
