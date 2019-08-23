@@ -13,5 +13,10 @@ class Utility(commands.Cog):
     async def report(self, ctx, *, message):
         print(f'User report by \"{ctx.author}\": {message}')
 
+    @commands.command()
+    async def close(self, ctx):
+        await ctx.send("Closing...")
+        await self.client.close()
+
 def setup(client):
     client.add_cog(Utility(client))
