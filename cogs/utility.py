@@ -21,5 +21,9 @@ class Utility(commands.Cog):
         else:
             await ctx.send('You\'re not Yumi.')
 
+    @commands.command()
+    async def status(self, ctx, *, status):
+        await self.client.change_presence(activity=discord.Game(status))
+
 def setup(client):
     client.add_cog(Utility(client))
