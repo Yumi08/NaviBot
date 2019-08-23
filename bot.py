@@ -26,6 +26,8 @@ async def on_command_error(ctx, error):
         await ctx.send('ERROR: Pass in all required arguments.')
     elif isinstance(error, commands.CommandNotFound):
         await ctx.send('ERROR: Command not found.')
+    elif isinstance(error, commands.MissingPermissions):
+        await ctx.send('ERROR: Missing permissions.')
     elif isinstance(error, commands.NotOwner):
         await ctx.send('ERROR: Not server owner.')
     else:
