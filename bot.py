@@ -17,6 +17,7 @@ client = commands.Bot(command_prefix = commands.when_mentioned_or('>'))
 
 @client.event
 async def on_ready():
+    await client.get_channel(614386121262235670).send('Hello, Navi.')
     await client.change_presence(activity=discord.Game('with Lain'))
     print('Hello, Navi.')
 
