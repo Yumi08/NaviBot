@@ -5,9 +5,15 @@ import random
 
 client = commands.Bot(command_prefix = '.')
 
+### Region: Events
+
 @client.event
 async def on_ready():
     print('Bot ready.')
+
+### End: Events
+
+### Region: User commands
 
 @client.command()
 async def ping(ctx):
@@ -21,6 +27,8 @@ async def _8ball(ctx):
 @client.command()
 async def report(ctx, *, message):
     print(f'User report by \"{ctx.author}\": {message}')
+
+### End: User commands
 
 client.run('NTg0ODE3NTMxNDU0MjI2NTAz.XV-Awg.hKgssTLIdHwiVK7mqI7K5clB6ew')
 
