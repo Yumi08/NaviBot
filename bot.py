@@ -24,14 +24,6 @@ async def on_command_error(ctx, error):
 ### Region: User commands
 
 @client.command()
-async def ping(ctx):
-    await ctx.send(f'{round(client.latency * 1000)}ms')
-
-@client.command()
-async def report(ctx, *, message):
-    print(f'User report by \"{ctx.author}\": {message}')
-
-@client.command()
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.send(f'Loaded {extension}.')
