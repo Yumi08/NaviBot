@@ -8,7 +8,7 @@ class Utility(commands.Cog):
 
     @commands.command()
     async def info(self, ctx):
-        await ctx.send('Navi, discord.py, created by Yumi.')
+        await ctx.send(f'Navi, discord.py, created by {self.client.get_user(218429853144186883)}.')
 
     @commands.command()
     async def ping(self, ctx):
@@ -19,19 +19,15 @@ class Utility(commands.Cog):
         print(f'User report by \"{ctx.author}\": {message}')
 
     @commands.command()
+    @commands.is_owner()
     async def close(self, ctx):
-        if ctx.author.id == 218429853144186883:
-            await ctx.send('Goodbye, Navi.')
-            await self.client.close()
-        else:
-            await ctx.send('You\'re not Yumi.')
+        await ctx.send('Goodbye, Navi.')
+        await self.client.close()
 
     @commands.command()
+    @commands.is_owner()
     async def status(self, ctx, *, status):
-        if ctx.author.id == 218429853144186883:
-            await self.client.change_presence(activity=discord.Game(status))
-        else:
-            await ctx.send('You\'re not Yumi.')
+        await self.client.change_presence(activity=discord.Game(status))
 
 def setup(client):
     client.add_cog(Utility(client))
