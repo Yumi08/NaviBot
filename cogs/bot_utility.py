@@ -24,7 +24,7 @@ class Bot_Utility(commands.Cog):
         await ctx.send('Goodbye, Navi.')
         await self.client.close()
 
-    @commands.command('OWNER ONLY: Set bot status.')
+    @commands.command(brief='OWNER ONLY: Set bot status.')
     @commands.is_owner()
     async def status(self, ctx, *, status):
         await self.client.change_presence(activity=discord.Game(status))
