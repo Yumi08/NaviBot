@@ -11,6 +11,10 @@ client = commands.Bot(command_prefix = '.')
 async def on_ready():
     print('Bot ready.')
 
+@client.event
+async def on_command_error(ctx, error):
+    await ctx.send("Error.")
+
 ### End: Events
 
 ### Region: User commands
