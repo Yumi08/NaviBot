@@ -23,6 +23,11 @@ class Fun(commands.Cog):
             await ctx.send("Heads.")
         else:
             await ctx.send("Tails.")
+    
+    @commands.command(brief='Mention someone random.')
+    async def someone(self, ctx):
+        await ctx.send(f'{random.choice(ctx.guild.members).mention}')
+        
 
 def setup(client):
     client.add_cog(Fun(client))
