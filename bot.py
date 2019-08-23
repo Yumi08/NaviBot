@@ -34,10 +34,12 @@ async def report(ctx, *, message):
 @client.command()
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
+    await ctx.send(f'Loaded {extension}.')
 
 @client.command()
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
+    await ctx.send(f'Unloaded {extension}.')
 
 ### End: User commands
 
