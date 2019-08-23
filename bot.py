@@ -35,19 +35,19 @@ async def on_command_error(ctx, error):
 
 ### Region: User commands
 
-@client.command()
+@client.command(brief='OWNER ONLY: Load cog.')
 @commands.is_owner()
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.send(f'Loaded {extension}.')
 
-@client.command()
+@client.command(brief='OWNER ONLY: Unload cog.')
 @commands.is_owner()
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     await ctx.send(f'Unloaded {extension}.')
 
-@client.command()
+@client.command(brief='OWNER ONLY: Reload cog.')
 @commands.is_owner()
 async def reload(ctx, extension):
     client.reload_extension(f'cogs.{extension}')

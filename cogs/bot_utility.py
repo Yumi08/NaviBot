@@ -6,25 +6,25 @@ class Bot_Utility(commands.Cog):
         self.client = client
 
 
-    @commands.command()
+    @commands.command(brief='Get bot info.')
     async def info(self, ctx):
         await ctx.send(f'Navi, discord.py, created by {self.client.get_user(218429853144186883)}.')
 
-    @commands.command()
+    @commands.command(brief='Get bot latency.')
     async def ping(self, ctx):
         await ctx.send(f'{round(self.client.latency * 1000)}ms')
 
-    @commands.command()
+    @commands.command(brief='Report a bug to the developer.')
     async def report(self, ctx, *, message):
         print(f'User report by \"{ctx.author}\": {message}')
 
-    @commands.command()
+    @commands.command(brief='OWNER ONLY: Close bot.')
     @commands.is_owner()
     async def close(self, ctx):
         await ctx.send('Goodbye, Navi.')
         await self.client.close()
 
-    @commands.command()
+    @commands.command('OWNER ONLY: Set bot status.')
     @commands.is_owner()
     async def status(self, ctx, *, status):
         await self.client.change_presence(activity=discord.Game(status))
