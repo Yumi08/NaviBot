@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 
 ### Region: Vars
 
-client = commands.Bot(command_prefix = '>')
+client = commands.Bot(command_prefix = commands.when_mentioned_or('>'))
 
 ### End: Vars
 
