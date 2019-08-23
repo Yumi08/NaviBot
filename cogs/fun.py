@@ -37,6 +37,10 @@ class Fun(commands.Cog):
     async def yell(self, ctx, user : discord.User, *, message):
         await user.send(f'{ctx.author.mention} yells to you: "{message}".')
         await ctx.message.delete()
+
+    @commands.command(brief='Rates something from 0 to 10.')
+    async def rate(self, ctx, *, thing):
+        await ctx.send(f'I\'d give {thing} a {round(random.uniform(0, 10), 1)}/10.')
         
 
 def setup(client):
