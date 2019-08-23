@@ -34,6 +34,11 @@ async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     await ctx.send(f'Unloaded {extension}.')
 
+@client.command()
+async def reload(ctx, extension):
+    client.reload_extension(f'cogs.{extension}')
+    await ctx.send(f'Reloaded {extension}')
+
 ### End: User commands
 
 # Autoload cogs
